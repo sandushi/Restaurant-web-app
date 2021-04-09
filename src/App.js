@@ -1,16 +1,20 @@
 
-import Nav from './components/home/NavBar';
-import MainMeals from './components/menu/MainMeals';
 import MenuNavigation from './components/menu/MenuNavigation';
+import React, { Component } from 'react';
+import Home from './components/home/Home';
 
-function App() {
-  return (
-    <div className="App">
-      <Nav />
-      <MenuNavigation />
-      <MainMeals />
-    </div>
-  );
+
+
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Home />
+        <MenuNavigation />
+      </div>
+    );
+  }
 }
 
 export default App;

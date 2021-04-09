@@ -1,24 +1,31 @@
 import React, { useState } from 'react';
 import { Navbar, Form, FormControl, Button, Nav } from 'react-bootstrap'
+import '../../index.css';
+
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-        </Nav>
-        <Form inline>
-          <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-          <Button variant="outline-info">Search</Button>
-        </Form>
-      </Navbar>
+    <div id="nav">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+
+                <Navbar.Brand href="#home">ABC Restaurant</Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="ml-auto">
+                        <Nav.Link href="#About">About us</Nav.Link>
+                        <Nav.Link href="#contact">Contact</Nav.Link>
+                        <Nav.Link href="#services">Services</Nav.Link>
+                        <Nav.Link href="#register">Register</Nav.Link>
+                        <Nav.Link href="#login">Login</Nav.Link>
+                       {/*<Nav.Link eventKey={2} href="#memes">
+                            Good stuff
+                        </Nav.Link>*/}
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
 
     </div>
   );
